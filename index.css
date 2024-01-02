@@ -1,0 +1,57 @@
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:90vh;
+    background-color:grey;
+
+}
+#noButton{
+    position:absolute;
+    margin-left:150px;
+    transition:0.5s;
+
+}
+#yesButton{
+    position:absolute;
+    margin-right:150px;
+
+}
+.header_text {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: darkred;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.buttons{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    margin-top:20px;
+    margin-left:20px;
+    
+}
+.btn {
+    background-color: black;
+    color: darkblue;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight:bold;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: background-color 0.2s ease;
+}
+.gif_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 90px;
+}

@@ -1,0 +1,63 @@
+<<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>demo</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1 class="header_text">WILL YOU BE MY VALENTINES?</h1>
+      </div>
+      <div class="gif_container">
+        <img
+          src="https://i.pinimg.com/originals/72/07/57/720757c4070e64120172aee576020828.gif"
+          alt="Cutie"
+        />
+      </div>
+      <div class="buttons">
+        <button class="btn" id="yesButton" onclick="nextPage()">YES</button>
+        <button
+          class="btn"
+          id="noButton"
+          onmouseover="moveButton()"
+          onclick="rejectOffer()"
+        >
+          NO
+        </button>
+        <script>
+          function nextPage() {
+            window.location.href = "yes.html";
+          }
+          function startMovingButton() {
+            if (!isButtonMoving) {
+              moveButton();
+            }
+          }
+          function moveButton() {
+            var x =
+              Math.random() *
+              (window.innerWidth -
+                document.getElementById("noButton").offsetWidth);
+            var y =
+              Math.random() *
+              (window.innerHeight -
+                document.getElementById("noButton").offsetHeight);
+            document.getElementById("noButton").style.left = x + "px";
+            document.getElementById("noButton").style.top = y + "px";
+
+            setTimeout(function () {
+              isButtonMoving = false;
+            }, 10);
+          }
+
+          function rejectOffer() {
+            window.location.href = "no.html";
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
